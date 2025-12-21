@@ -1,0 +1,27 @@
+# Prometheus Configuration
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    monitor: 'sentiment-analysis'
+
+# Scrape configurations
+scrape_configs:
+  # FastAPI metrics
+  - job_name: 'fastapi'
+    static_configs:
+      - targets: ['host.docker.internal:8000']
+        labels:
+          service: 'sentiment-api'
+  
+  # Kafka metrics (if JMX exporter is enabled)
+  - job_name: 'kafka'
+    static_configs:
+      - targets: ['kafka:9092']
+        labels:
+          service: 'kafka-broker'
+  
+  # Prometheus self-monitoring
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']

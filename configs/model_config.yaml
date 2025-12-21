@@ -1,0 +1,13 @@
+# Model Configuration
+model:
+  type: "distilbert"  # Options: distilbert, lstm, bow
+  num_classes: 2
+  dropout: 0.3
+  freeze_bert: false  # For DistilBERT only
+  
+  # For LSTM/BoW models
+  vocab_size: 10000
+  embedding_dim: 128
+  hidden_dim: 256
+  num_layers: 2
+  bidirectional: true

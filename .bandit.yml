@@ -1,0 +1,7 @@
+# Bandit security configuration
+skips: ['B101', 'B601']
+
+exclude_dirs:
+  - tests/
+  - .venv/
+  - venv/

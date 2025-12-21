@@ -1,0 +1,21 @@
+# Development dependencies
+pytest==7.4.2
+pytest-cov==4.1.0
+pytest-asyncio==0.21.1
+black==23.9.1
+flake8==6.1.0
+isort==5.12.0
+mypy==1.5.1
+pre-commit==3.4.0
+
+# Jupyter
+jupyter==1.0.0
+notebook==7.0.3
+ipykernel==6.25.2
+matplotlib==3.7.2
+seaborn==0.12.2
+plotly==5.17.0
+
+# Testing
+httpx==0.25.0
+faker==19.6.2
